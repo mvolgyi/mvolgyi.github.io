@@ -1,0 +1,43 @@
+        <!-- Left Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <div class="menu-left-part">
+                <div class="site-info-holder">
+                    <h1 class="site-title">{{ site.name }}</h1>
+                    <p class="site-description">{{ site.longdescription }}</p>
+                </div>
+                <nav id="header-main-menu">
+                    <ul class="main-menu sm sm-clean">
+                        {% for p in site.pages %}
+                            {% if p.url != '/404/' and p.url != '/' and p.url != '/feed.xml' and p.url != '/sitemap.xml' and p.url != '/robots.txt' %}
+                            <li><a {% if p.url == page.url %}class="current"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <footer>
+                    <div class="footer-info">
+                        © 2018 Ariel Gianatiempo. Made with <i class="fa fa-heart"></i>.
+                    </div>
+                </footer>
+            </div>
+            <div class="menu-right-part">
+                <div class="logo-holder">
+                    <a href="{{ site.baseurl }}/"><img src="{{ site.avatar }}" alt="Just me"></a>
+                </div>
+                <div class="toggle-holder">
+                    <div id="toggle">
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+                <div class="social-holder">
+                    <div class="social-list">
+                        {% if site.footer-links.github %}<a href="https://github.com/{{ site.footer-links.github }}"><i class="fa fa-github"></i></a>{% endif %}
+                        {% if site.footer-links.stackoverflow %}<a href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}"><i class="fa fa-stack-overflow"></i></a>{% endif %}
+                        {% if site.footer-links.email %}<a href="mailto:{{ site.footer-links.email }}"><i class="fa fa-envelope"></i></a>{% endif %}
+                        {% if site.footer-links.rss %}<a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i></a>{% endif %}
+                    </div>
+                </div>
+                <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
+            </div>
+            <div class="clear"></div>
+        </div>

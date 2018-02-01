@@ -1,0 +1,75 @@
+#
+# This file contains configuration flags to customize your site
+#
+
+name: Matias Volgyi
+description: Random Thoughts
+longdescription: And now I have something to say. 
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://avatars2.githubusercontent.com/u/772100?s=400&u=2be94988e7d2a1ab8eb68cd7366919e65058e125&v=4
+
+author:
+  name: Matias Volgyi
+  position: Coder, Dreamer, Photographer
+  about: I'm a software developer with 10+ years of Java experience. Now looking for new challenges and thus jumping with both feet into Javascript and Python (learning MEAN and Django just to start). Also, I love coffe and fashion photography, but let's leave that for another day.
+
+resume:
+  name: Matias Volgyi
+  tagline: Software Developer
+  pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+  summary: 'Summarise your career here lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  You can <a href="#" target="_blank">download this free resume/CV template here</a>. Aenean
+  commodo ligula eget dolor aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+  montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.'
+  email: matias.volgyi@gmail.com
+  phone: +54 11 5377 5021
+  website: volgyi.com #do not add http://
+  linkedin: mvolgyi
+  github: mvolgyi
+  twitter: '@mvolgyi'
+
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  email: matias.volgyi@gmail.com
+  github: mvolgyi
+  rss: .
+
+baseurl: ""
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+compress_html: # - http://jch.penibelst.de/
+  clippings: all
+  ignore:
+    envs: development
+
+permalink: /:title/
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+# Include these folders.
+include: ["_pages"]
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

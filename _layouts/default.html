@@ -1,0 +1,87 @@
+---
+layout: compress
+---
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+        <meta charset="utf-8" />
+        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+        {% if page.excerpt %}
+        <meta name="description" content="{{ page.excerpt| strip_html }}" />
+        <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+        {% else %}
+        <meta name="description" content="{{ site.description }}">
+        <meta property="og:description" content="{{ site.description }}" />
+        {% endif %}
+        <meta name="author" content="{{ site.name }}" />
+        {% if page.title %}
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="twitter:title" content="{{ page.title }}" />
+        {% endif %}
+
+        <link rel="shortcut icon" href="{{site.avatar}}" />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"  href='{{ site.baseurl }}/assets/style.css' />
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml"/>
+        {% if site.tags != "" %}{% include tags.html %}{% endif %}
+    </head>
+
+    <body class="{% if page.id %}single-post{% else if page.title %}page page-template-default{% else %}home blog{% endif %}">
+        <!-- Left Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <div class="menu-left-part">
+                <div class="site-info-holder">
+                    <h1 class="site-title">{{ site.name }}</h1>
+                    <p class="site-description">{{ site.longdescription }}</p>
+                </div>
+                <nav id="header-main-menu">
+                    <ul class="main-menu sm sm-clean">
+                        {% for p in site.pages %}
+                            {% if p.url != '/404/' and p.url != '/' and p.url != '/feed.xml' and p.url != '/sitemap.xml' and p.url != '/robots.txt' %}
+                            <li><a {% if p.url == page.url %}class="current"{% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <footer>
+                    <div class="footer-info">
+                        © 2018 Matias Volgyi. Made with <i class="fa fa-heart"></i>.
+                    </div>
+                </footer>
+            </div>
+            <div class="menu-right-part">
+                <div class="logo-holder">
+                    <a href="{{ site.baseurl }}/"><img src="{{ site.avatar }}" alt="Just me"></a>
+                </div>
+                <div class="toggle-holder">
+                    <div id="toggle">
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+                <div class="social-holder">
+                    <div class="social-list">
+                        {% if site.footer-links.github %}<a href="https://github.com/{{ site.footer-links.github }}"><i class="fa fa-github"></i></a>{% endif %}
+                        {% if site.footer-links.stackoverflow %}<a href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}"><i class="fa fa-stack-overflow"></i></a>{% endif %}
+                        {% if site.footer-links.email %}<a href="mailto:{{ site.footer-links.email }}"><i class="fa fa-envelope"></i></a>{% endif %}
+                        {% if site.footer-links.rss %}<a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i></a>{% endif %}
+                    </div>
+                </div>
+                <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        {{ content }}
+
+        <!--Load JavaScript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.nicescroll.min.js'></script>
+        <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.smartmenus.min.js'></script>
+        <script type='text/javascript' src='{{ site.baseurl }}/assets/main.js'></script>
+    </body>
+</html>

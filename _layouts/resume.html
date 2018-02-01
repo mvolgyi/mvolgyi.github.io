@@ -1,0 +1,93 @@
+---
+layout: compress
+---
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  {% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt| strip_html }}" />
+  <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+  {% else %}
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.description }}" />
+  {% endif %}
+  <meta name="author" content="{{ site.name }}" />
+  {% if page.title %}
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="twitter:title" content="{{ page.title }}" />
+  {% endif %}
+  <link rel="shortcut icon" href="{{site.avatar}}" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href='{{ site.baseurl }}/assets/style.css' />
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/resume.css">
+  {% if site.tags != "" %}{% include tags.html %}{% endif %}
+</head> 
+<body>
+  {% include sidebar.html %}
+  <div class="resume-container">
+    <div class="wrapper">
+      <div class="sidebar-wrapper">
+        <div class="profile-container">
+          <img class="profile-img" src="{{ site.avatar }}" alt="Just me">
+          {% if site.resume.name %}<h1 class="name">{{site.resume.name}}</h1>{% endif %}
+          {% if site.resume.tagline %}<h3 class="tagline">{{site.resume.tagline}}</h3>{% endif %}
+        </div><!--//profile-container-->
+        <div class="contact-container container-block">
+          <ul class="list-unstyled contact-list">
+            {% if site.resume.email %}<li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{site.resume.email}}">{{site.resume.email}}</a></li>{% endif %}
+            {% if site.resume.phone %}<li class="phone"><i class="fa fa-phone"></i><a href="tel:{{site.resume.phone}}">{{site.resume.phone}}</a></li>{% endif %}
+            {% if site.resume.website %}<li class="website"><i class="fa fa-globe"></i><a href="http://{{site.resume.website}}" target="_blank">{{site.resume.website}}</a></li>{% endif %}
+            {% if site.resume.linkedin %}<li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/{{site.resume.linkedin}}" target="_blank">{{site.resume.linkedin}}</a></li>{% endif %}
+            {% if site.resume.github %}<li class="github"><i class="fa fa-github"></i><a href="http://github.com/{{site.resume.github}}" target="_blank">{{site.resume.github}}</a></li>{% endif %}
+            {% if site.resume.twitter %}<li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{site.resume.twitter}}" target="_blank">{{site.resume.twitter}}</a></li>{% endif %}
+          </ul>
+        </div><!--//contact-container-->
+        <div class="education-container container-block">
+          <h2 class="container-block-title">Education</h2>
+          {% for education in site.data.educations %}
+            <div class="item">
+              <h4 class="degree">{{ education.degree }}</h4>
+              <h5 class="meta">{{ education.university }}</h5>
+              <div class="time">{{ education.time }}</div>
+            </div><!--//item-->
+          {% endfor %}
+        </div><!--//education-container-->
+        <div class="languages-container container-block">
+          <h2 class="container-block-title">Languages</h2>
+            <ul class="list-unstyled interests-list">
+              {%for language in site.data.languages %}
+              <li>{{ language.idiom }} <span class="lang-desc">({{ language.level }})</span></li>
+              {% endfor %}
+            </ul>
+        </div><!--//interests-->
+      </div><!--//sidebar-wrapper-->
+   
+      <div class="main-wrapper">{{ content }}</div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.nicescroll.min.js'></script>
+  <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.smartmenus.min.js'></script>
+  <script type='text/javascript' src='{{ site.baseurl }}/assets/main.js'></script>
+  <script>
+    jQuery(document).ready(function($) {
+      $(".level-bar-inner").css("width", "0");
+      $(window).on("load", function() {
+        $(".level-bar-inner").each(function() {
+          $(this).animate({ width: $(this).data("level") }, 800);
+        });
+      });
+    });
+  </script> 
+</body>
+</html> 
+

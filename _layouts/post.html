@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<!-- Single Content -->
+<div id="content" class="site-content center-relative">
+  <div class="single-post-wrapper content-1070 center-relative">
+    <article class="center-relative">
+      <h1 class="entry-title">{{ page.title }}</h1>
+      <div class="post-info content-900 center-relative">
+        <div class="cat-links">
+          <ul>
+            {% for tag in page.tags %}
+              {% capture tag_name %}{{ tag }}{% endcapture %}
+              <li><a href="/tag/{{ tag_name }}">{{ tag_name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="entry-date published">{{ page.date | date: "%B %e, %Y" }}</div>
+        <div class="clear"></div>
+      </div>
+      <div class="entry-content">
+        <div class="content-wrap content-900 center-relative ">{{ content }}</div>
+      </div>
+      <div class="clear"></div>
+    </article>
+    <br>
+    <div class="content-900 center-relative">
+        <div class="team-holder ">
+          <div class="member relative one ">
+            <img src="{{ site.avatar }}" alt="Just me">
+                        <div class="member-info">
+                            <div class="member-name">{{site.author.name}}</div>
+                            <div class="member-position">{{site.author.position}}</div>
+                            <div class="member-content">{{site.author.about}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+  </div>
+</div>
