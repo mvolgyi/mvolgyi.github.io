@@ -2,7 +2,12 @@
   degree: Bachelor in Software Development
   university: ISTEA Institute
   time: 2017 - Present
-# - education:
-#   degree: BSc in Applied Mathematics
-#   university: Bristol University
-#   time: 2007 - 2011
+- education:
+  degree: SQL Server programming
+  university: ISTEA Institute
+  time: 2016 - 2017
+- education:
+  degree: Designing & reporting SQL Server
+  university: ISTEA Institute
+  time: 2016 - 2017
+  

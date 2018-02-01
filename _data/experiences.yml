@@ -2,27 +2,17 @@
   role: System Analyst
   time: 2016 - Present
   company: Opcion Seguros S.A
-  details: "Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing
-  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-  magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
-  <br> <br>
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-  laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-  architecto beatae vitae dicta sunt explicabo."
+  details: "Monitoring, reporting, cloud and on-premises infrastructure, pricing & assessment,
+  technical support, informatics security projects, software analysis and development"
 - experience:
   role: Cloud Technician
   time: 2015 - 2016
   company: Sofftek
-  details: "Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing
-  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-  magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  pellentesque eu, pretium quis, sem."
+  details: "Monitoring, Reporting, Cloud infrastructure pricing & assessment, technical support, 
+  infrastructure analysis, automation"
 - experience:
   role: Microsoft Technician Pre Sales
   time: 2013 - 2015
   company: PC Arts Argentina
-  details: "Describe your role here lorem ipsum dolor sit amet, consectetuer adipiscing
-  elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-  magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  pellentesque eu, pretium quis, sem."
+  details: "Administration of O365, Assessment provided to partners, customized Microsoft solutions, 
+  trainings and demos for partners"
