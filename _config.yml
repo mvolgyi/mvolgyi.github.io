@@ -10,9 +10,9 @@ longdescription: I present my self.
 avatar: https://avatars2.githubusercontent.com/u/772100?s=400&u=2be94988e7d2a1ab8eb68cd7366919e65058e125&v=4
 
 author:
-  name: Matias Volgyi
-  position: SysAdmin, Software Developer, father, enthusiast
-  about: I'm a system administrator with 7+ years of experience. Now working on my new challenge, become a full-time software developer.
+name: Matias Volgyi
+position: SysAdmin, Software Developer, father, enthusiast
+about: I'm a system administrator with 7+ years of experience. Now working on my new challenge, become a full-time software developer.
 
 resume:
   name: Matias Volgyi
@@ -33,7 +33,7 @@ resume:
 footer-links:
   email: matias.volgyi@gmail.com
   github: mvolgyi
-  rss: .
+  # rss: .
 
 baseurl: ""
 
