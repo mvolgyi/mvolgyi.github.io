@@ -16,6 +16,7 @@ layout: default
           </ul>
         </div>
         <div class="entry-date published">{{ page.date | date: "%B %e, %Y" }}</div>
+        {% include read_time.html %}
         <div class="clear"></div>
       </div>
       <div class="entry-content">
@@ -23,20 +24,5 @@ layout: default
       </div>
       <div class="clear"></div>
     </article>
-    <br>
-    <div class="content-900 center-relative">
-        <div class="team-holder ">
-          <div class="member relative one ">
-            <img src="{{ site.avatar }}" alt="Just me">
-                        <div class="member-info">
-                            <div class="member-name">{{site.author.name}}</div>
-                            <div class="member-position">{{site.author.position}}</div>
-                            <div class="member-content">{{site.author.about}}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
   </div>
 </div>

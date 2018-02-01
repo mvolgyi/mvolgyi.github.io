@@ -18,6 +18,7 @@ layout: default
               </ul>
             </div>
             <div class="entry-date published">{{ post.date | date: "%B %e, %Y" }}</div>
+            {% include read_time.html %}
             <h2 class="entry-title">
               <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             </h2>
@@ -46,6 +47,7 @@ layout: default
               </ul>
             </div>
             <div class="entry-date published">{{ post.date | date: "%B %e, %Y" }}</div>
+            {% include read_time.html %}
             <div class="clear"></div>
           </div>
         </div>

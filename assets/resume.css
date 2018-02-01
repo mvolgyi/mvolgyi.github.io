@@ -1,16 +1,6 @@
-/*   
- * Template Name: Orbit - Responsive Resume/CV Template for Developers
- * Version: 1.0
- * Author: Xiaoying Riley
- * Twitter: @3rdwave_themes
- * License: Creative Commons Attribution 3.0 License
- * Website: http://themes.3rdwavemedia.com/
-*/
-/* styles.css */
-/* ======= Base ======= */
 body {
   font-family: "Montserrat", sans-serif, Arial;
-  color: #485a74;
+  color: #545e6c;
   background: #f5f5f5;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -55,7 +45,7 @@ p {
 
 .wrapper {
   /* max-width: 960px; */
-  margin: 0 30px 0 130px;
+  margin: 0 145px 0 245px;
   /* position: relative; */
   /* -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
   -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -65,7 +55,7 @@ p {
 .sidebar-wrapper {
   background: #42a8c0;
   position: absolute;
-  right: 30px;
+  right: 145px;
   width: 240px;
   height: 100%;
   min-height: 800px;
@@ -76,7 +66,7 @@ p {
 }
 .sidebar-wrapper .profile-container {
   padding: 30px 15px;
-  background: rgba(59, 29, 29, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #fff;
 }
@@ -215,12 +205,14 @@ p {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
+  float: left;
 }
 .main-wrapper .time {
   position: absolute;
   right: 0;
   top: 0;
   color: #97aac3;
+  padding: 20px;
 }
 .main-wrapper .company {
   margin-bottom: 10px;
@@ -246,6 +238,7 @@ p {
   font-size: 14px;
   margin-top: 0;
   margin-bottom: 12px;
+  padding: 0;
 }
 .skillset .level-bar {
   height: 12px;
@@ -253,7 +246,7 @@ p {
 }
 .skillset .level-bar-inner {
   height: 12px;
-  background: #85cfe2;
+  background: #7bc2d3;
 }
 .footer {
   padding: 30px;
@@ -261,7 +254,7 @@ p {
 }
 .footer .copyright {
   line-height: 1.6;
-  color: #496080;
+  color: #545e6c;
   font-size: 13px;
 }
 .footer .fa-heart {
@@ -269,6 +262,10 @@ p {
 }
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
+  .wrapper {
+    margin: 0 5px 0 45px;
+    padding: 5px 0;
+  }
   .sidebar-wrapper {
     position: static;
     width: inherit;
@@ -280,6 +277,8 @@ p {
     position: static;
     display: block;
     margin-top: 5px;
+    padding: 15px 0;
+    float: right;
   }
   .main-wrapper .upper-row {
     margin-bottom: 0;
@@ -293,6 +292,7 @@ p {
     float: left;
     width: 30%;
     margin-bottom: 0;
+    padding: 0;
   }
   .skillset .level-bar {
     display: inline-block;
@@ -302,12 +302,7 @@ p {
     top: 1px;
   }
 }
-/* Large devices (large desktops, 1200px and up) */
-/* Ex-Large devices (large desktops, 1200px and up) */
 
-/* 
-used for profile image
-*/
 .profile-img {
   max-width: 100px;
   margin-bottom: 15px;

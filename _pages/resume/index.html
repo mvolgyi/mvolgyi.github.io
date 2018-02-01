@@ -6,7 +6,7 @@ permalink: /resume/
 
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/resume.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/resume.css?{{site.time | date: '%s%N'}}">
   <div class="wrapper">
     <div class="sidebar-wrapper">
       <div class="profile-container">
@@ -24,6 +24,7 @@ permalink: /resume/
           {% if site.resume.twitter %}<li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{site.resume.twitter}}" target="_blank">{{site.resume.twitter}}</a></li>{% endif %}
         </ul>
       </div><!--//contact-container-->
+      {% if site.data.educations %}
       <div class="education-container container-block">
         <h2 class="container-block-title">Education</h2>
         {% for education in site.data.educations %}
@@ -34,6 +35,7 @@ permalink: /resume/
           </div><!--//item-->
         {% endfor %}
       </div><!--//education-container-->
+      {% endif %}
       <div class="languages-container container-block">
         <h2 class="container-block-title">Languages</h2>
           <ul class="list-unstyled interests-list">
@@ -44,52 +46,53 @@ permalink: /resume/
       </div><!--//interests-->
     </div><!--//sidebar-wrapper-->
     <div class="main-wrapper">
-
-
-{% if site.resume.summary %}
-<section class="section summary-section">
-  <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
-    <div class="summary">
-      <p>{{ site.resume.summary }}</p>
-    </div><!--//summary-->
-</section><!--//section-->
-{% endif %}
-{% if site.data.experiences %}
-<section class="section experiences-section">
-  <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
-  {% for experience in site.data.experiences %}
-  <div class="item">
-    <div class="meta">
-      <div class="upper-row">
-        <h3 class="job-title">{{ experience.role }}</h3>
-        <div class="time">{{ experience.time }}</div>
-      </div><!--//upper-row-->
-      <div class="company">{{ experience.company }}</div>
-    </div><!--//meta-->
-    {% if experience.details %}
-    <div class="details">
-      <p>{{ experience.details }}</p>
-    </div><!--//details-->
+    {% if site.resume.summary %}
+    <section class="section summary-section">
+      <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
+        <div class="summary">
+          <p>{{ site.resume.summary }}</p>
+        </div><!--//summary-->
+      </section><!--//section-->
+      <hr>
     {% endif %}
-  </div><!--//item-->
-  {% endfor %}
-</section><!--//section-->
-{% endif %}
-{% if site.data.skills %}
-<section class="skills-section section">
-  <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
-  <div class="skillset">
-    {% for skill in site.data.skills %}
-    <div class="item">
-      <h3 class="level-title">{{ skill.name }}</h3>
-      <div class="level-bar">
-        <div class="level-bar-inner" data-level="{{ skill.level }}">
-        </div>
-      </div><!--//level-bar-->
-    </div><!--//item-->
-    {% endfor %}
+    {% if site.data.experiences %}
+    <section class="section experiences-section">
+      <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+      {% for experience in site.data.experiences %}
+      <div class="item">
+        <div class="meta">
+          <div class="upper-row">
+            <h3 class="job-title">{{ experience.role }}</h3>
+            <div class="time">{{ experience.time }}</div>
+          </div><!--//upper-row-->
+          <div class="company">{{ experience.company }}</div>
+        </div><!--//meta-->
+        {% if experience.details %}
+        <div class="details">
+          <p>Technologies: <i>{{ experience.tech }}</i></p>
+          <p>Activities: <i>{{ experience.details }}</i></p>
+        </div><!--//details-->
+        {% endif %}
+      </div><!--//item-->
+      <hr>
+      {% endfor %}
+    </section><!--//section-->
+    {% endif %}
+    {% if site.data.skills %}
+    <section class="skills-section section">
+      <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+      <div class="skillset">
+        {% for skill in site.data.skills %}
+        <div class="item">
+          <h3 class="level-title">{{ skill.name }}</h3>
+          <div class="level-bar">
+            <div class="level-bar-inner" data-level="{{ skill.level }}">
+            </div>
+          </div><!--//level-bar-->
+        </div><!--//item-->
+        {% endfor %}
+      </div>
+    </section><!--//skills-section-->
+    {% endif %}
   </div>
-</section><!--//skills-section-->
-{% endif %}
-</div>
 </div>

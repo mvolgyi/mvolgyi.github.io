@@ -25,7 +25,7 @@ layout: compress
         <link rel="shortcut icon" href="{{site.avatar}}" />
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css"  href='{{ site.baseurl }}/assets/style.css' />
+        <link rel="stylesheet" type="text/css"  href='{{ site.baseurl }}/assets/style.css?{{site.time | date: '%s%N'}}' />
         <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml"/>
         {% if site.tags != "" %}{% include tags.html %}{% endif %}
     </head>
@@ -49,13 +49,13 @@ layout: compress
                 </nav>
                 <footer>
                     <div class="footer-info">
-                        © 2018 Matias Volgyi. Made with <i class="fa fa-heart"></i>.
+                        © 2018 Ariel Gianatiempo. Made with <i class="fa fa-heart"></i>.
                     </div>
                 </footer>
             </div>
             <div class="menu-right-part">
                 <div class="logo-holder">
-                    <a href="{{ site.baseurl }}/"><img src="{{ site.avatar }}" alt="Just me"></a>
+                    <a href="{{ site.baseurl }}/"><img src="{{site.url}}/images/logo.png" alt="Just me"></a>
                 </div>
                 <div class="toggle-holder">
                     <div id="toggle">
@@ -70,7 +70,7 @@ layout: compress
                         {% if site.footer-links.rss %}<a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i></a>{% endif %}
                     </div>
                 </div>
-                <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
+                <div class="fixed scroll-top"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
             </div>
             <div class="clear"></div>
         </div>
@@ -80,8 +80,8 @@ layout: compress
         <!--Load JavaScript-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.nicescroll.min.js'></script>
-        <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.smartmenus.min.js'></script>
-        <script type='text/javascript' src='{{ site.baseurl }}/assets/main.js'></script>
+        <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.nicescroll.min.js?{{site.time | date: '%s%N'}}'></script>
+        <script type='text/javascript' src='{{ site.baseurl }}/assets/jquery.smartmenus.min.js?{{site.time | date: '%s%N'}}'></script>
+        <script type='text/javascript' src='{{ site.baseurl }}/assets/main.js?{{site.time | date: '%s%N'}}'></script>
     </body>
 </html>

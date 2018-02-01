@@ -40,7 +40,10 @@ jQuery(window).load(function() {
 
   //Fix for sidebar height
   jQuery("#sidebar").css("minHeight", jQuery("body").outerHeight());
-  jQuery(".sidebar-wrapper").css("minHeight", jQuery(".main-wrapper").outerHeight());
+  //fix for resume sidebar height
+  if ($('body').outerWidth() > 767) {
+    jQuery(".sidebar-wrapper").css("minHeight", jQuery(".main-wrapper").outerHeight());
+  }
 
   jQuery(".spinner").fadeOut("fast");
 });
@@ -48,9 +51,10 @@ jQuery(window).load(function() {
 jQuery(window).resize(function() {
   //Fix for sidebar height
   jQuery("#sidebar").css("minHeight", jQuery("body").outerHeight());
-  jQuery(".sidebar-wrapper").css("minHeight", jQuery(".main-wrapper").outerHeight());
-
-  
+  //fix for resume sidebar height
+  if ($('body').outerWidth() > 767) {
+    jQuery(".sidebar-wrapper").css("minHeight", jQuery(".main-wrapper").outerHeight());
+  }
 
   jQuery(".menu-left-part.open").width( jQuery(".sidebar.open").width() - jQuery(".menu-right-part.open").width() );
 });

@@ -1,0 +1,136 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+<style>
+    .contact-form {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[name="name"],
+    .contact-form textarea {
+        padding: 10px;
+        margin: 15px 0;
+        height: 28px;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif, Arial;
+        width: 100%;
+        line-height: 25px;
+        border: 2px solid;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+    }
+
+    .contact-form input[type="submit"] {
+        display: inline-block;
+        border: 2px solid;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        margin-bottom: 25px;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        font-family: "Montserrat", sans-serif, Arial;
+        font-weight: 700;
+        width: 100%;
+        font-size: 20px;
+        transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .contact-form input[type="submit"]:hover {
+        color: #0697ae;
+    }
+
+    .contact-form input[type="text"]::-webkit-input-placeholder,
+    .contact-form input[type="email"]::-webkit-input-placeholder,
+    .contact-form textarea::-webkit-input-placeholder {
+        font-family: "Montserrat", sans-serif, Arial;
+        color: #404040;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        text-transform: uppercase;
+    }
+
+    .contact-form input[type="text"]::-moz-placeholder,
+    .contact-form input[type="email"]::-moz-placeholder,
+    .contact-form textarea::-moz-placeholder {
+        font-family: "Montserrat", sans-serif, Arial;
+        color: #404040;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        opacity: 1;
+        text-transform: uppercase;
+    }
+
+    .contact-form input[type="text"]:-ms-input-placeholder,
+    .contact-form input[type="email"]:-ms-input-placeholder,
+    .contact-form textarea:-ms-input-placeholder {
+        font-family: "Montserrat", sans-serif, Arial;
+        color: #404040;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        text-transform: uppercase;
+    }
+
+    .contact-form input[type="text"]:-moz-placeholder,
+    .contact-form input[type="email"]:-moz-placeholder,
+    .contact-form textarea:-moz-placeholder {
+        font-family: "Montserrat", sans-serif, Arial;
+        color: #404040;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        opacity: 1;
+        text-transform: uppercase;
+    }
+    @media screen and (max-width: 1020px) {
+        .contact-form {
+            margin-top: 100px;
+        }
+    }
+</style>
+
+<div id="content" class="site-content">
+    <article>
+        <div class="content-1070 center-relative entry-content ">
+            <div class="content-900 center-relative">
+                <div class="one_half" style="width:49%; float:left;">
+                    <h1 class="entry-title">Contact</h1>
+                    <div>
+                        <p>We choose to go to the moon in this decade and do the other things, not because they are easy.</p>
+                        <br>
+                        <p>Because they are hard, because that goal will serve to organize and measure the best of our energies
+                            and skills, because that challenge is one that we are willing to accept, one we are unwilling
+                            to postpone and one.</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="one_half" style="width:49%;float:right;">
+                    <form class="contact-form" action="https://formspree.io/{{site.email}}" method="POST">
+                        <p><input id="contact-email" type="email" name="_replyTo" placeholder="Email"></p>
+                        <p><input id="name" type="text" name="name" placeholder="Name"></p>
+                        <p><input id="subject" type="text" name="_subject" placeholder="Subject"></p>
+                        <p><textarea id="message" name="message" placeholder="Message"></textarea></p>
+                        <p><input type="text" name="_gotcha" style="display:none"></p>
+                        <p><input type="submit" value="Submit"></p>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </article>
+</div>

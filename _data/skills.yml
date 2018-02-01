@@ -1,4 +1,10 @@
 - skill:
+  name: HTML5 & CSS
+  level: 60%
+- skill:
+  name: C#
+  level: 60%
+- skill:
   name: Python & Django
   level: 50%
 - skill:
@@ -7,12 +13,6 @@
 - skill:
   name: Angular
   level: 50%
-- skill:
-  name: HTML5 & CSS
-  level: 60%
-- skill:
-  name: C#
-  level: 60%
 # - skill:
 #   name: Sketch & Photoshop
 #   level: 60%

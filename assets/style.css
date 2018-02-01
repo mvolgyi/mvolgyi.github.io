@@ -25,7 +25,7 @@ html {
   
   body a {
     text-decoration: none;
-    color: #404040;
+    color: #d8588c;
     transition: color 0.2s linear, background-color 0.2s linear,
       border-color 0.2s linear;
   }
@@ -149,7 +149,7 @@ html {
   }
   
   .site-info-holder {
-    padding-left: 50px;
+    padding-left: 25px;
     padding-top: 15px;
   }
   
@@ -172,7 +172,7 @@ html {
   
   #header-main-menu {
     font-family: "Montserrat", sans-serif, Arial;
-    padding-left: 50px;
+    padding-left: 25px;
     padding-top: 80px;
   }
   
@@ -453,7 +453,7 @@ html {
     display: none;
   }
   
-  .published {
+  .published, .reading-time {
     font-family: "Montserrat", sans-serif, Arial;
     display: inline-block;
     font-size: 14px;
@@ -462,7 +462,7 @@ html {
     color: #aabdbd;
   }
   
-  .published:before {
+  .published:before, .reading-time:before {
     content: "\2022";
     font-size: 14px;
     display: inline-block;
@@ -689,7 +689,7 @@ html {
   .footer-info {
     font-family: "Montserrat", sans-serif, Arial;
     padding-top: 80px;
-    padding-left: 50px;
+    padding-left: 25px;
     padding-right: 30px;
     padding-bottom: 60px;
     color: #848484;
@@ -1055,12 +1055,12 @@ html {
       margin-top: 0;
     }
   
-    .published {
+    .published, .reading-time {
       display: block;
       line-height: 22px;
     }
   
-    .published:before {
+    .published:before, .reading-time:before {
       display: none;
     }
   
