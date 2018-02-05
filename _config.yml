@@ -3,8 +3,8 @@
 #
 
 name: Matias Volgyi
-description: I salute you
-longdescription: presenting myself. 
+description: Hello to everybody
+longdescription: Getting Started. 
 
 # for contact page
 email: matias.volgyi@gmail.com
@@ -18,7 +18,7 @@ resume:
   summary: 'I am a system administrator with 7+ years of experience. Now working on my new challenge, become a full-time software developer.'
   email: matias.volgyi@gmail.com
   phone: 
-  website: #blog.webjeda.com #do not add http://
+  website: #mvolgyi.com #do not add http://
   linkedin: mvolgyi
   github: mvolgyi
   twitter: '@mvolgyi'
