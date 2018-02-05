@@ -11,7 +11,10 @@
   name: Javascript & jQuery
   level: 50%
 - skill:
-  name: Angular
+  name: Angular.js
+  level: 50%
+- skill:
+  name: Node.js
   level: 50%
 # - skill:
 #   name: Sketch & Photoshop
