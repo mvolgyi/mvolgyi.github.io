@@ -4,7 +4,7 @@ title: Hello World
 tags: jekyll markdown
 ---
 
-Hi It's me!
+Hello to everyone!
 
 I'm a tech enthusiast who's always trying new stuff.
 
